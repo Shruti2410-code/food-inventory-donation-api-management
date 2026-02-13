@@ -1,35 +1,83 @@
-📦 Food Inventory & Donation Management API
+# 🚀 Food Inventory & Donation Management API
 
-RESTful backend system for managing food donations, inventory tracking, claims, and restock recommendations.
+A production-ready RESTful backend system built using **Spring Boot** for managing food donations, inventory tracking, claim processing, and automated restock recommendations.
 
-🚀 Features
+---
 
-Add new food donations
+## 📌 Overview
 
-Retrieve inventory data
+The **Food Inventory & Donation Management API** is designed to manage food donation records efficiently while ensuring proper inventory tracking and stock validation.
 
-Claim food items (auto stock update)
+It includes business logic for:
+- Processing food claims
+- Automatically updating stock levels
+- Detecting low-stock items
+- Generating restock recommendations
 
-Category-based filtering
+This project demonstrates clean backend architecture and real-world service-layer logic.
 
-Automated restock recommendation
+---
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 
-Spring Boot
+- **Spring Boot**
+- **Spring Data JPA (Hibernate)**
+- **MySQL**
+- **Swagger (OpenAPI)**
+- **Lombok**
+- **Maven**
 
-JPA / Hibernate
+---
 
-MySQL
+## 🧱 Architecture
 
-Swagger (OpenAPI)
+The project follows a layered architecture:
 
-📊 Business Logic Implemented
+Controller → Service → Repository → Entity → Database
 
-Stock validation before claim
+- **Controller Layer** – Handles REST endpoints
+- **Service Layer** – Contains business logic
+- **Repository Layer** – Database interaction via JPA
+- **Entity Layer** – Maps objects to relational tables
 
-Real-time quantity update
+---
 
-Low-stock threshold detection
+## ✨ Key Features
 
-▶ Demo
+### ➕ Add Food Donation
+- Create new food records
+- Store donor details, category, quantity, expiry date
+
+### 📋 Retrieve Inventory
+- Fetch all stored food items
+- Filter by donor
+- Filter by category
+
+### 🔁 Claim Food
+- Process claim requests
+- Validate available stock
+- Automatically reduce quantity
+- Persist updated data in database
+
+### 📉 Automated Restock Recommendation
+- Detect low-stock items
+- Identify items nearing expiry
+- Generate system-based restock suggestions
+
+## 📷 API Documentation
+
+Interactive API documentation available via **Swagger UI**
+
+Example endpoints include:
+
+- `POST /api/food`
+- `GET /api/food`
+- `PUT /api/food/{id}/claim`
+- `GET /api/food/restock-suggestions`
+
+---
+
+## ▶ Demo
+
+https://github.com/user-attachments/assets/cfa3b03a-e00b-437f-b670-250a77092fdf
+
